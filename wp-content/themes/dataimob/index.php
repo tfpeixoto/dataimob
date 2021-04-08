@@ -4,18 +4,12 @@ require_once('header.php');
 ?>
 
 <!-- banner -->
-<section class="banner-interno">
+<section class="banner-interno" style="background-image: linear-gradient(to bottom, rgba(4, 99, 158, 0), rgba(4, 99, 158, 0.75)), url(<?php bloginfo('template_url'); ?>/assets/images/banner-interno.png);">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="banner__interno">
-          <img src="#" alt="#" title="#" />
-
-          <div class="banner__interno__conteudo">
-            <h1>Todos os artigos</h1>
-            <p class="lead">Confira os melhores conteúdos sobre o mercado imobiliário! <a href="#"> > </a></p>
-          </div>
-        </div>
+    <div class="row d-flex align-items-center justify-content-start">
+      <div class="col-6 banner-interno__conteudo">
+        <h1>Todos os artigos</h1>
+        <p class="lead">Confira os melhores conteúdos sobre o mercado imobiliário!</p>
       </div>
     </div>
   </div>
@@ -25,6 +19,8 @@ require_once('header.php');
 <section class="lista">
   <div class="container">
     <div class="row">
+      <div class="lista__grafismo-topo"></div>
+
       <?php
       if (have_posts()) : while (have_posts()) : the_post();
           $data_post = get_the_date();
@@ -53,6 +49,8 @@ require_once('header.php');
       endif;
       wp_reset_query();
       ?>
+
+      <div class="lista__grafismo-baixo"></div>
     </div>
 
     <div class="row lista__vermais">

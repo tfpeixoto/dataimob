@@ -8,7 +8,11 @@
   &__marca {
     display: flex;
     align-items: center;
+    justify-content: center;
 
+    @include media-breakpoint-up(md) {
+      justify-content: start;
+    }
     img{
       padding: 1rem;
     }
@@ -16,6 +20,11 @@
   &__conteudo {
     p {
       margin-bottom: 0;
+      text-align: center;
+
+      @include media-breakpoint-up(md) {
+        text-align: left;
+      }
     }
   }
 }

@@ -36,8 +36,8 @@ gulp.task('purgecss', ['sass'], function () {
   ])
     .pipe(purgecss({
       content: ['../**/*.php'],
-      // whitelist: [],
-      // whitelistPatterns: []
+      whitelist: ['far', 'fa', 'fas', 'fab', 'fa-clock'],
+      whitelistPatterns: [/fa/]
     }))
     .pipe(gulp.dest('../assets/css'))
 });
@@ -57,9 +57,9 @@ gulp.task('purgecss', ['sass'], function () {
 
 gulp.task('js', function () {
   return gulp.src([
-    // 'js/components/jquery-3.5.1.min.js',
-    // 'js/components/popper-1.16.1.min.js',
-    // 'js/components/bootstrap-4.5.0.min.js',
+    'js/jquery-3.5.1.min.js',
+    'js/popper-1.16.1.min.js',
+    'js/bootstrap-4.5.0.min.js',
     // 'js/components/jquery.mask-1.14.16.min.js',
     // 'js/components/jquery.validate-1.19.2.min.js',
     'js/acoes.js',

@@ -14,7 +14,7 @@ add_action('after_setup_theme', 'dataimob_adiciona_recursos_tema');
 
 // LIMITE DE RESUMO
 function wpdocs_custom_excerpt_length( $length ) {
-  return 20;
+  return 25;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 

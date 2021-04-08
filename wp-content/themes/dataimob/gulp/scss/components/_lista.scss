@@ -1,4 +1,37 @@
 .lista {
+  .row {
+    position: relative;
+  }
+  &__grafismo-topo {
+    border: 3px solid var(--secondary);
+    content: " ";
+    display: none;
+    height: 115px;
+    left: -20px;
+    position: absolute;
+    top: -30px;
+    width: 500px;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+  &__grafismo-baixo {
+    border: 3px solid var(--secondary);
+    bottom: 10px;
+    content: " ";
+    display: none;
+    height: 450px;
+    position: absolute;
+    right: -20px;
+    z-index: -1;
+    width: 500px;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
   &__post {
     background: white;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
@@ -30,12 +63,13 @@
       text-align: right;
       transition: all ease-in-out 0.25s;
     }
+
     &__imagem {
       margin-bottom: 1rem;
       overflow: hidden;
       height: 250px;
       width: 100%;
-      
+
       a {
         img {
           min-height: 250px;
@@ -44,13 +78,15 @@
         }
       }
     }
-    &__conteudo{
-      padding: .5rem 1.5rem;
+
+    &__conteudo {
+      min-height: 250px;
+      padding: 0.5rem 1.5rem;
 
       h2 {
         font-size: 1.2rem;
         font-weight: bold;
-  
+
         a {
           color: var(--primary);
           text-decoration: none;
@@ -59,8 +95,8 @@
       p {
         color: var(--gray);
 
-        &.small{
-          font-size: .8rem;
+        &.small {
+          font-size: 0.8rem;
           font-weight: 700;
         }
         a {
@@ -71,19 +107,46 @@
     }
   }
 
-  &__vermais{
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0 4rem 0;
+  &__semresultado{
+    font-size: 1rem;
+    margin: 3rem;
+    text-align: center;
 
     a{
+      font-weight: bold;
+    }
+  }
+
+  &__titulo {
+    padding: 3rem 0;
+    text-align: center;
+
+    h2 {
+      color: var(--secondary);
+      font-family: $fonte_titulo;
+      font-size: 3rem;
+      font-weight: 700;
+    }
+  }
+
+  &__vermais {
+    display: flex;
+    justify-content: center;
+    padding: 2rem .5rem;
+    
+    @include media-breakpoint-up(md) {
+      padding: 2rem 0 4rem 0;
+    }
+    a {
       background: var(--primary);
       border-radius: 5px;
-      box-shadow: 0 3px 6px rgba(0,0,0,.16);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
       color: white;
       font-size: 1.5rem;
       font-weight: 700;
+      line-height: 1.2;
       padding: 1rem 3rem;
+      text-align: center;
       text-decoration: none;
       text-transform: uppercase;
     }

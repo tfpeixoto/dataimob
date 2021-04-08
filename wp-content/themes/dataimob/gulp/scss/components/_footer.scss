@@ -4,6 +4,11 @@
   &__marca {
     height: auto;
     max-width: 100%;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
   }
 
   &__conteudo {

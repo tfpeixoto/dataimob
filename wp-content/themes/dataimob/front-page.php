@@ -10,12 +10,18 @@ require_once("header.php");
     <div class="row">
       <div class="col-12">
         <?php
-        if (have_posts()) : while (have_posts()) : the_post();
+        $args = array(
+          'posts_per_page' => '1'
+        );
+
+        $post_destaque = new WP_Query($args);
+
+        if ($post_destaque->have_posts()) : while ($post_destaque->have_posts()) : $post_destaque->the_post();
             $data_post = get_the_date();
             $link_autor = get_the_author_link();
         ?>
 
-            <div class="banner__destaque" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
+            <div class="banner__destaque" style="background-image: linear-gradient(to bottom, rgba(4, 99, 158, 0), rgba(4, 99, 158, 0.75)), url(<?php the_post_thumbnail_url(); ?>)">
               <div class="banner__destaque__conteudo">
                 <div class="titulo">
                   <p class="small"><?= $data_post ?> por <?= $link_autor ?></p>
@@ -62,8 +68,16 @@ require_once("header.php");
 <section class="lista">
   <div class="container">
     <div class="row">
+      <div class="lista__grafismo-topo"></div>
+
       <?php
-      if (have_posts()) : while (have_posts()) : the_post();
+      $args = array(
+        'posts_per_page' => '6'
+      );
+
+      $posts_home = new WP_Query($args);
+
+      if ($posts_home->have_posts()) : while ($posts_home->have_posts()) : $posts_home->the_post();
           $data_post = get_the_date();
           $link_autor = get_the_author_link();
       ?>
@@ -91,95 +105,7 @@ require_once("header.php");
       wp_reset_query();
       ?>
 
-      <!-- <div class="col-12 col-md-4">
-        <article class="card lista__post">
-          <p class="data">11 de março de 2021</p>
-
-          <div class="lista__post__imagem">
-            <a href="#" title="#">
-              <img src="<?php bloginfo('template_url'); ?>/assets/images/imagem-post.jpg" alt="#" title="#" />
-            </a>
-          </div>
-
-          <div class="lista__post__conteudo">
-            <h2><a href="#" title="#">Vender ou alugar um imóvel, qual a melhor opção?</a></h2>
-            <p>Vender ou alugar um imóvel, como saber a melhor opção para seu cliente?...</p>
-            <p class="small"><a href="#">por DataImob</a></p>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-12 col-md-4">
-        <article class="card lista__post">
-          <p class="data">11 de março de 2021</p>
-
-          <div class="lista__post__imagem">
-            <a href="#" title="#">
-              <img src="<?php bloginfo('template_url'); ?>/assets/images/imagem-post.jpg" alt="#" title="#" />
-            </a>
-          </div>
-
-          <div class="lista__post__conteudo">
-            <h2><a href="#" title="#">Vender ou alugar um imóvel, qual a melhor opção?</a></h2>
-            <p>Vender ou alugar um imóvel, como saber a melhor opção para seu cliente?...</p>
-            <p class="small"><a href="#">por DataImob</a></p>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-12 col-md-4">
-        <article class="card lista__post">
-          <p class="data">11 de março de 2021</p>
-
-          <div class="lista__post__imagem">
-            <a href="#" title="#">
-              <img src="<?php bloginfo('template_url'); ?>/assets/images/imagem-post.jpg" alt="#" title="#" />
-            </a>
-          </div>
-
-          <div class="lista__post__conteudo">
-            <h2><a href="#" title="#">Vender ou alugar um imóvel, qual a melhor opção?</a></h2>
-            <p>Vender ou alugar um imóvel, como saber a melhor opção para seu cliente?...</p>
-            <p class="small"><a href="#">por DataImob</a></p>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-12 col-md-4">
-        <article class="card lista__post">
-          <p class="data">11 de março de 2021</p>
-
-          <div class="lista__post__imagem">
-            <a href="#" title="#">
-              <img src="<?php bloginfo('template_url'); ?>/assets/images/imagem-post.jpg" alt="#" title="#" />
-            </a>
-          </div>
-
-          <div class="lista__post__conteudo">
-            <h2><a href="#" title="#">Vender ou alugar um imóvel, qual a melhor opção?</a></h2>
-            <p>Vender ou alugar um imóvel, como saber a melhor opção para seu cliente?...</p>
-            <p class="small"><a href="#">por DataImob</a></p>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-12 col-md-4">
-        <article class="card lista__post">
-          <p class="data">11 de março de 2021</p>
-
-          <div class="lista__post__imagem">
-            <a href="#" title="#">
-              <img src="<?php bloginfo('template_url'); ?>/assets/images/imagem-post.jpg" alt="#" title="#" />
-            </a>
-          </div>
-
-          <div class="lista__post__conteudo">
-            <h2><a href="#" title="#">Vender ou alugar um imóvel, qual a melhor opção?</a></h2>
-            <p>Vender ou alugar um imóvel, como saber a melhor opção para seu cliente?...</p>
-            <p class="small"><a href="#">por DataImob</a></p>
-          </div>
-        </article>
-      </div> -->
+      <div class="lista__grafismo-baixo"></div>
     </div>
 
     <div class="row lista__vermais">

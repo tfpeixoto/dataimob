@@ -1,33 +1,100 @@
-.post{
-  &__header{
+.post {
+  margin-top: 150px;
+
+  &__header {
     color: var(--primary);
-    margin-top: calc(65px + 3rem);
     text-align: center;
 
-    h1{
+    h1 {
       color: var(--primary);
+      font-size: 3rem;
       font-weight: 700;
+      margin-bottom: 1.5rem;
     }
-    a{
+    p {
+      span {
+        display: block;
+        font-size: 1rem;
+        padding: 0 0.75rem;
+        width: 100%;
+      }
+    }
+    a {
       color: var(--primary);
+      font-weight: bold;
     }
   }
 
-  &__imagem{
+  &__imagem {
     display: flex;
     justify-content: center;
+    margin: 1rem 0;
     text-align: center;
+
+    @include media-breakpoint-up(md) {
+      margin: 50px 0;
+    }
+    img {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      height: auto;
+      min-width: 100%;
+    }
   }
 
-  &__conteudo{
+  &__conteudo {
     line-height: 2;
     padding: 3rem 0;
-  }
-}
 
-.lista{
-  &__titulo{
-    margin: 3rem 0;
-    text-align: center;
+    &__social {
+      ul {
+        display: flex;
+        padding-inline-start: 0;
+        
+        @include media-breakpoint-up(md) {
+          display: block;
+        }
+        li {
+          display: block;
+          list-style: none;
+          height: 60px;
+          margin: .25rem;
+          width: 60px;
+
+          @include media-breakpoint-up(md) {
+            margin: 1rem;
+          }
+          a {
+            background: var(--secondary);
+            border-radius: 100%;
+            color: $white;
+            display: block;
+            font-size: 22px;
+            height: 45px;
+            text-align: center;
+            transition: all ease-in-out 0.25s;
+            width: 45px;
+
+            @include media-breakpoint-up(md) {
+              height: 60px;
+              font-size: 30px;
+              width: 60px;
+            }
+            &:hover {
+              background: var(--primary);
+            }
+          }
+        }
+      }
+    }
+
+    &__texto {
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 2rem 0 1rem 0;
+      }
+    }
   }
 }

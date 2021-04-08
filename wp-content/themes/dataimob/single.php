@@ -19,7 +19,7 @@ if (have_posts()) : while (have_posts()) : the_post();
               <span class="post__header__data"><?= $data_post ?></span>
               <?= $link_autor ?>
               <!-- <a href="#" class="post__header__autor">por DataImob</a> -->
-              <span class="post__header__tempo">6 minutos de leitura</span>
+              <span class="post__header__tempo"><i class="far fa-clock"></i> 6 minutos de leitura</span>
             </p>
           </div>
 
@@ -31,11 +31,12 @@ if (have_posts()) : while (have_posts()) : the_post();
         <div class="row post__conteudo">
           <div class="col-12 col-md-2 post__conteudo__social">
             <ul>
-              <li><a href="#">Linkedin</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Whatsapp</a></li>
-              <li><a href="#">Email</a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+              <li><a href="#"><i class="far fa-envelope"></i></a></li>
             </ul>
           </div>
 
@@ -77,7 +78,14 @@ wp_reset_query();
 
     <div class="row">
       <?php
-      if (have_posts()) : while (have_posts()) : the_post();
+      $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => '3'
+      );
+
+      $post_relacionados = new WP_Query($args);
+
+      if ($post_relacionados->have_posts()) : while ($post_relacionados->have_posts()) : $post_relacionados->the_post();
           $data_post = get_the_date();
           $link_autor = get_the_author_link();
       ?>

@@ -19,19 +19,25 @@ header{
 
   .navbar-collapse{
     display: flex;
-    justify-content: flex-end;
-
+    justify-content: start;
+    
+    @include media-breakpoint-up(md) {
+      justify-content: flex-end;
+    }
     .navbar-nav{
       display: flex;
       justify-content: flex-end;
+      text-align: center;
+      width: 100%;
 
+      @include media-breakpoint-up(md) {
+        justify-content: flex-end;
+        text-align: left;
+      }
       .nav-link{
         color: var(--primary);
         font-family: "Poppins", sans-serif;
         font-weight: 400;
-
-        &:hover{
-        }
       }
     }
   }
