@@ -1,0 +1,33 @@
+.post{
+  &__header{
+    color: var(--primary);
+    margin-top: calc(65px + 3rem);
+    text-align: center;
+
+    h1{
+      color: var(--primary);
+      font-weight: 700;
+    }
+    a{
+      color: var(--primary);
+    }
+  }
+
+  &__imagem{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__conteudo{
+    line-height: 2;
+    padding: 3rem 0;
+  }
+}
+
+.lista{
+  &__titulo{
+    margin: 3rem 0;
+    text-align: center;
+  }
+}

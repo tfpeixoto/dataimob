@@ -6,15 +6,17 @@ function dataimob_adiciona_recursos_tema()
   add_theme_support('title-tag');
   add_theme_support('custom-logo');
   add_theme_support('post-thumbnails');
-  // add_image_size('lista_posts', 0, 204, true);
+  add_image_size('destaque_posts', 1000, 500, true);
+  add_image_size('imagem_post', 1000, 500, true);
+  add_image_size('lista_posts', 350, 275, true);
 }
 add_action('after_setup_theme', 'dataimob_adiciona_recursos_tema');
 
 // LIMITE DE RESUMO
-// function wpdocs_custom_excerpt_length( $length ) {
-//   return 35;
-// }
-// add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+function wpdocs_custom_excerpt_length( $length ) {
+  return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 // INCLUI NAV WALKER
 function register_navwalker()

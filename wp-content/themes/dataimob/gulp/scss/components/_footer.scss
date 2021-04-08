@@ -1,0 +1,20 @@
+.copy {
+  padding: 2rem 0;
+
+  &__marca {
+    height: auto;
+    max-width: 100%;
+  }
+
+  &__conteudo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    p {
+      color: var(--primary);
+      margin-bottom: 0;
+    }
+  }
+}

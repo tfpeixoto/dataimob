@@ -1,0 +1,21 @@
+.sobre {
+  align-items: center;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  padding: 4rem 0;
+
+  &__marca {
+    display: flex;
+    align-items: center;
+
+    img{
+      padding: 1rem;
+    }
+  }
+  &__conteudo {
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

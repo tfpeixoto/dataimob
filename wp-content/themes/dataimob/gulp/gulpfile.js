@@ -1,5 +1,5 @@
 var
-  gulp = require('gulp');
+gulp = require('gulp');
 browserSync = require('browser-sync');
 sass = require('gulp-sass');
 // imagemin = require('gulp-imagemin');
@@ -27,12 +27,12 @@ gulp.task('browser-sync', function () {
 gulp.task('sass', function () {
   return gulp.src(['scss/**/*.scss'])
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError)) // converter o Sass em CSS
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('/css'));
 });
 
 gulp.task('purgecss', ['sass'], function () {
   return gulp.src([
-    'css/*.css',
+    '/css/*.css',
   ])
     .pipe(purgecss({
       content: ['../**/*.php'],

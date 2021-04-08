@@ -1,0 +1,38 @@
+header{
+  background: white;
+  box-shadow: 0 3px 6px rgba(0,0,0,.16);
+  left: 0;
+  min-height: 65px;
+  padding: .5rem 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+
+  a{
+    img{
+      height: auto;
+      width: 110px;
+    }
+  }
+
+  .navbar-collapse{
+    display: flex;
+    justify-content: flex-end;
+
+    .navbar-nav{
+      display: flex;
+      justify-content: flex-end;
+
+      .nav-link{
+        color: var(--primary);
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+
+        &:hover{
+        }
+      }
+    }
+  }
+}
