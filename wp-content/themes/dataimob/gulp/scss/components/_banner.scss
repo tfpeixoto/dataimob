@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   min-height: 700px;
-  padding: calc(65px + 3rem) 0 4rem 0;
+  padding: calc(65px + 4rem) 0 5rem 0;
   z-index: 0;
 
   // banner home
@@ -16,8 +16,15 @@
     }
     h1{
       color: $white;
+      font-weight: bold;
+    }
+    i{
+      color: $light-blue;
+      font-size: 3rem;
+      margin-bottom: .5rem;
     }
     .btn{
+      box-shadow: 0 3px 6px rgba(0,0,0,.16);
       color: $white;
       font-weight: bold;
       text-transform: uppercase;

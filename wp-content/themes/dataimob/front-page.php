@@ -35,8 +35,8 @@ require_once("header.php");
 
         <div class="row mb-4">
           <div class="col-12">
-            <a href="#saberMais" class="btn btn-secondary">Conheça</a>
-            <a href="#sejaNossoParceiro" class="btn btn-primary">Seja uma Imobiliária Parceira</a>
+            <a href="#saberMais" class="btn btn-primary">Conheça</a>
+            <a href="#sejaNossoParceiro" class="btn btn-secondary text-primary">Seja uma Imobiliária Parceira</a>
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@ require_once("header.php");
     <div class="row">
       <div class="col-12 saber-mais__titulo">
         <h2>Instale o widget em seu site e capture mais clientes</h2>
-        <p class="lead">Conquiste potenciais clientes e gere leads automaticamente. Veja os benefícios:</p>
+        <p class="lead">Conquiste potenciais clientes e gere leads automaticamente. <span class="font-weight-bold">Veja os benefícios:</span></p>
       </div>
     </div>
 
@@ -63,6 +63,7 @@ require_once("header.php");
         <div class="saber-mais__icone">
           <i class="far fa-gem"></i>
         </div>
+
         <div class="saber-mais__texto">
           <h3>Gere Leads de graça</h3>
           <p>Nossa plataforma irá te enviar os primeiros 20 leads diários totalmente gratuitos. Caso ultrapasse esse limite, entre em <a class="btMenu" href="#contato">contato com a DataImob</a> que lhe apresentaremos um de nossos planos.</p>
@@ -70,27 +71,42 @@ require_once("header.php");
       </div>
 
       <div class="col-8 saber-mais__item">
-        <i class="far fa-star"></i>
-        <h3>Índices precisos e atualizados</h3>
-        <p>Mensalmente revisamos nosso indicadores e reprocessamos nossos dados,
-          garantindo sempre uma maior confiabilidade no cálculo do valor do imóvel. Caso queira saber mais sobre a DataImob, <a class="btMenu" href="#sobreNos">clique aqui</a> e conheça sobre as nossas próximas ferramentas que serão disponibilizadas.</p>
+        <div class="saber-mais__icone">
+          <i class="far fa-star"></i>
+        </div>
+
+        <div class="saber-mais__texto">
+          <h3>Índices precisos e atualizados</h3>
+          <p>Mensalmente revisamos nosso indicadores e reprocessamos nossos dados,
+            garantindo sempre uma maior confiabilidade no cálculo do valor do imóvel. Caso queira saber mais sobre a DataImob, <a class="btMenu" href="#sobreNos">clique aqui</a> e conheça sobre as nossas próximas ferramentas que serão disponibilizadas.</p>
+        </div>
       </div>
 
       <div class="col-8 saber-mais__item">
-        <i class="far fa-flag"></i>
-        <h3>Personalizável</h3>
-        <p>Personalize nosso Widget com as cores da sua empresa.</p>
+        <div class="saber-mais__icone">
+          <i class="far fa-flag"></i>
+        </div>
+
+        <div class="saber-mais__texto">
+          <h3>Personalizável</h3>
+          <p>Personalize nosso Widget com as cores da sua empresa.</p>
+        </div>
       </div>
 
       <div class="col-8 saber-mais__item">
-        <i class="far fa-check-circle"></i>
-        <h3>Fácil instalação</h3>
-        <p>Nosso Widget é muito prático de instalar! <a class="btMenu" href="#sejaNossoParceiro">Cadastre</a> em nosso site e receba um email com o script e o código único para a inserção no seu portal.</p>
+        <div class="saber-mais__icone">
+          <i class="far fa-check-circle"></i>
+        </div>
+
+        <div class="saber-mais__texto">
+          <h3>Fácil instalação</h3>
+          <p>Nosso Widget é muito prático de instalar! <a class="btMenu" href="#sejaNossoParceiro">Cadastre</a> em nosso site e receba um email com o script e o código único para a inserção no seu portal.</p>
+        </div>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-12 text-center">
+      <div class="col-12 saber-mais__cta">
         <a href="#sejaNossoParceiro" class="btn btn-primary"><span class="font-weight-bold">Clique aqui</span> e seja uma imobiliária parceira</a>
       </div>
     </div>
@@ -282,5 +298,11 @@ require_once("header.php");
 </section>
 
 <?php
+require_once('template-parts/modal-contato.php');
+require_once('template-parts/modal-cookie.php');
+require_once('template-parts/modal-registro-erro.php');
+require_once('template-parts/modal-registro.php');
+require_once('template-parts/modal-termo.php');
+
 require_once('footer.php');
 ?>

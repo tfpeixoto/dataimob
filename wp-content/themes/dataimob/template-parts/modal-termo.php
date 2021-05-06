@@ -1,19 +1,17 @@
 <!-- Modal -->
 <div class="modal fade" id="modalTermo" tabindex="-1" role="dialog" aria-labelledby="modalTermoTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header" style="background-color: #1C85C7;">
-        <h5 class="modal-title text-white" id="modalTermoTitle">
-          Termo de Aceite
-        </h5>
+      <div class="modal-header">
+        <h5 class="modal-title text-white" id="modalTermoTitle">Termo de Aceite</h5>
+        
         <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close">
+          <i class="fas fa-times"></i>
         </button>
       </div>
       <div class="modal-body">
 
         <div class="row mb-3 text-black">
-
-
           <h4 class="font-weight-bold text-center">IMPORTANTE – LEIA COM ATENÇÃO</h4>
           <p class="fs-5">O início da utilização do software licenciado implica na ciência e na aceitação do presente Termo de Uso ficando as partes obrigadas a qualquer título.</p>
 
@@ -84,7 +82,7 @@
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-secundary btn-lg" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>

@@ -13,7 +13,7 @@
   </div>
 </footer>
 
-<script src="<?php bloginfo('template_url'); ?>/assets/js/scripts.min.js"></script>
-</body>
+<?php wp_footer(); ?>
 
+</body>
 </html>

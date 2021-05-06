@@ -41,12 +41,15 @@ function dataimob_scripts()
   wp_enqueue_style('critital', get_template_directory_uri() . '/assets/css/critical.css', array(), '1.0', 'all');
   
   wp_deregister_script('jquery');
-  wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), '3.5.1', true);
-  wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js', array('jquery'), '2.4.4', true);
-  wp_enqueue_script('bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js', array('jquery', 'popper'), '4.5.0', true);
-  wp_enqueue_script('validate', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js', array('jquery'), '1.19.2', true);
-  wp_enqueue_script('mask', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js', array('jquery'), '1.14.16', true);
-  wp_enqueue_script('acoes', get_template_directory_uri() . '/assets/js/scripts.min.js', array('jquery'), '1.0', true);
+  // wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), '3.5.1', true);
+  // wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js', array('jquery-js'), '2.4.4', true);
+  // wp_enqueue_script('bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js', array('jquery-js', 'popper-js'), '4.5.0', true);
+  // wp_enqueue_script('validate', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js', array('jquery-js'), '1.19.2', true);
+  // wp_enqueue_script('mask', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js', array('jquery-js'), '1.14.16', true);
+  wp_enqueue_script('acoes', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), '1.0', true);
+
+  // wp_enqueue_script('requisicao', get_template_directory_uri() . '/assets/js/components/ScriptRequisicao.js', array('acoes-js'), '1.0', true);
+  // wp_enqueue_script('contato', get_template_directory_uri() . '/assets/js/components/ScriptContato.js', array('acoes-js', 'requisicao-js'), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'dataimob_scripts');
 

@@ -1,0 +1,45 @@
+.modal {
+  background: rgba(0, 0, 0, 0.5) !important;
+
+  .modal-dialog {
+    margin: 5rem auto;
+  }
+  .btn-close {
+    background: transparent;
+    box-sizing: content-box;
+    width: 1em;
+    height: 1em;
+    padding: 0.25em 0.25em;
+    border: 0;
+    line-height: 1;
+    font-size: 1.5rem;
+    border-radius: 0.25rem;
+    opacity: 0.5;
+    
+    i{
+      color: $light-blue;
+    }
+  }
+  .modal-header{
+    background: $primary;
+    color: $white
+  }
+  .modal-body {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+
+    .row{
+      margin: 0;
+
+      h4{
+        float: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        display: block;
+      }
+    }
+  }
+}

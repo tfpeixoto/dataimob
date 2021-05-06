@@ -1,12 +1,12 @@
     <!-- Modal Cookies-->
     <div class="modal fade" id="modalCookies" tabindex="-1" role="dialog" aria-labelledby="modalCookiesTitle" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
-          <div class="modal-header" style="background-color: #1C85C7;">
-            <h5 class="modal-title " id="mmodalCookiesTitle">
-              Política de Privacidade
-            </h5>
+          <div class="modal-header">
+            <h5 class="modal-title " id="mmodalCookiesTitle">Política de Privacidade</h5>
+            
             <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close" id="btnFecharCKHD">
+              <i class="fas fa-times"></i>
             </button>
           </div>
           <div class="modal-body">
@@ -106,7 +106,7 @@
 
           </div>
           <div class="modal-footer">
-            <button id="btnFecharCK" type="button" class="btn btn-secundary btn-lg" data-dismiss="modal">Fechar</button>
+            <button id="btnFecharCK" type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Fechar</button>
           </div>
         </div>
       </div>
