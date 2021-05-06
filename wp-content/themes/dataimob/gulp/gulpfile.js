@@ -36,8 +36,8 @@ gulp.task('purgecss', ['sass'], function () {
   ])
     .pipe(purgecss({
       content: ['../**/*.php'],
-      whitelist: ['far', 'fa', 'fas', 'fab', 'fa-clock'],
-      whitelistPatterns: [/fa/]
+      whitelist: ['fa-compass', 'fa-sun', 'fa-clipboard', 'fa-object-group', 'fa-edit', 'fa-user-circle', 'fa-clock'],
+      whitelistPatterns: [/^far/, /^fas/, /^fab/]
     }))
     .pipe(gulp.dest('../assets/css'))
 });

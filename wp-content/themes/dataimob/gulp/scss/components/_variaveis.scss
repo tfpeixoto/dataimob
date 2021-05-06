@@ -2,10 +2,34 @@
   --primary: #1595E5;
   --secondary: #FFC107;
   --blue: #3AA2FB;
+  --light-blue: #b3d8ef;
   --gray: #3E3E3E;
 }
+
+$primary: #1595E5;
+$secondary: #FFC107;
+$blue: #3AA2FB;
+$light-blue: #b3d8ef;
+$gray: #3E3E3E;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "blue": $blue,
+  "light-blue": $light-blue,
+  "gray": $gray,
+);
 
 $font-family-base: "Segoe UI", sans-serif;
 $fonte_titulo: "Poppins", sans-serif;
 
 $link-color: var(--primary);
+
+html{
+  scroll-behavior: smooth;
+}
+
+i{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}

@@ -1,0 +1,33 @@
+.sobre-nos{
+  padding: 4rem 0;
+
+  &__titulo{
+    margin-bottom: 2rem;
+    text-align: center;
+
+    h2{
+      color: $primary;
+      font-weight: bold;
+    }
+  }
+
+  &__item{
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+    i{
+      color: $light-blue;
+      font-size: 5rem;
+    }
+    h3{
+      margin-top: 1rem;
+      color: $secondary;
+    }
+    .btn{
+      margin: 1rem 0;
+    }
+  }
+}

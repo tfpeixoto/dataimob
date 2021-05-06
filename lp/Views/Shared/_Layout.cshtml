@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br" class="h-100">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] DataImob</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+
+    <link href="~/lib/fontawesome/css/all.css?v=00.4" rel="stylesheet">
+
+    <script src="~/js/fontAW_a076d05399.js?v=00.4"></script>
+
+    <link href="/css/deafult.css?v=00.11" rel="stylesheet">
+
+
+
+</head>
+
+<body class="d-flex flex-column h-100">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container-fluid box">
+                <a class="navbar-brand btMenu" href="#"><img src="/Imagens/dataImob_2.png" alt="DataImob" class="img-fluid w-75 logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end pr-3" id="navbarSupportedContent">
+                    <ul class="navbar-nav fs-5">
+                        <li class="nav-item">
+                            <a class="nav-link btMenu text-select" href="#">Início</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link btMenu" href="#saberMais">A Ferramenta</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link btMenu" href="#sejaNossoParceiro">Seja Nosso Parceiro</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link btMenu" href="#sobreNos">Sobre Nós</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link btMenu" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-shrink-0">
+        <div class="row text-white mt-3 content">
+            @RenderBody()
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3">
+        <div class="container-fluid text-center box">
+            <span class="">© 2021 - Todos os Direitos Reservados - DataImob</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#2096df"
+                },
+                "button": {
+                    "background": "#79c0ec"
+                }
+            },
+            "theme": "edgeless",
+            "position": "bottom-right",
+            "type": "opt-out",
+
+            "content": {
+                "message": "Este site usa cookies para melhorar a sua experiência de navegação. Você pode configurar o seu navegador para rejeitar estes cookies. Nesse caso, a navegação e os serviços deste site podem ser limitados. Se você não modificar as opções e continuar navegando, estará ciente acerca do uso de cookies neste site e aceitando as nossas Políticas de Cookies e de Privacidade. Para mais informações consulte:",
+                "allow": "Aceitar",
+                "dismiss": "Aceitar",
+                "deny": "Recusar",
+                "target": "",
+                "href": "#",
+                "link": "Política de cookies.",
+                "policy": "Política de cookies"
+            }
+        });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WW50PGE9R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-9WW50PGE9R');
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Script de validacao de campos-->
+    <script src="/js/jquery.mask.js"></script>
+    <!-- Script Site -->
+    <script src="/js/ScriptRequisicao.js?v=00.20"></script>
+    <!-- Script Contato -->
+    <script src="/js/ScriptContato.js?v=00.20"></script>
+
+
+</body>
+</html>

@@ -1,130 +1,281 @@
 <?php
-/* Page Template: Home */
+/* Template Name: Home */
 $estiloPagina = "home.css";
 require_once("header.php");
 ?>
 
 <!-- banner -->
-<section class="banner">
+<section class="banner home">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <?php
-        $args = array(
-          'posts_per_page' => '1'
-        );
-
-        $post_destaque = new WP_Query($args);
-
-        if ($post_destaque->have_posts()) : while ($post_destaque->have_posts()) : $post_destaque->the_post();
-            $data_post = get_the_date();
-            $link_autor = get_the_author_link();
-        ?>
-
-            <div class="banner__destaque" style="background-image: linear-gradient(to bottom, rgba(4, 99, 158, 0), rgba(4, 99, 158, 0.75)), url(<?php the_post_thumbnail_url(); ?>)">
-              <div class="banner__destaque__conteudo">
-                <div class="titulo">
-                  <p class="small"><?= $data_post ?> por <?= $link_autor ?></p>
-                  <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-                </div>
-
-                <div class="resumo">
-                  <?php the_excerpt(); ?>
-                </div>
-              </div>
-            </div>
-
-        <?php endwhile;
-        endif;
-        wp_reset_query();
-        ?>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- pesquisa -->
-<section class="busca">
-  <div class="container">
-    <div class="row d-flex justify-content-center">
-      <div class="col-12 col-md-10 busca__box">
-        <div class="busca__box__titulo">
-          <p>Encontre artigos</p>
+    <div class="row justify-content-between">
+      <div class="col-12 col-md-6">
+        <div class="row mb-4">
+          <span>Conheça nossa nova ferramenta</span>
+          <h1>Calculadora do valor do imóvel</h1>
+          <p class="lead">A nova ferramenta da DataImob permite descobrir o valor de venda e/ou de aluguel dos imóveis de todo o Brasil, ajudando as imobiliárias a disponibilizarem aos seus clientes uma avaliação rápida e fácil de se usar, gerando um lead a cada valor calculado!</p>
+          <p class="lead">Realize a simulação ao lado e descubra o potencial da ferramenta!</p>
         </div>
 
-        <div class="busca__box__form">
-          <form role="search" method="get" id="searchform" class="searchform form-inline" action="<?php echo esc_url(home_url('/')); ?>">
-            <label class="screen-reader-text" for="s"><?php _x('Search for:', 'label'); ?></label>
-            <input type="text" class="form-control" value="<?php echo get_search_query(); ?>" name="s" id="s" />
-            <button type="submit" id="searchsubmit"><i class="fas fa-search"></i></button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- lista posts -->
-<section class="lista">
-  <div class="container">
-    <div class="row">
-      <div class="lista__grafismo-topo"></div>
-
-      <?php
-      $args = array(
-        'posts_per_page' => '6'
-      );
-
-      $posts_home = new WP_Query($args);
-
-      if ($posts_home->have_posts()) : while ($posts_home->have_posts()) : $posts_home->the_post();
-          $data_post = get_the_date();
-          $link_autor = get_the_author_link();
-      ?>
-
-          <div class="col-12 col-md-4">
-            <article class="card lista__post">
-              <p class="data"><?= $data_post ?></p>
-
-              <div class="lista__post__imagem">
-                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                  <?php the_post_thumbnail('lista_posts'); ?>
-                </a>
-              </div>
-
-              <div class="lista__post__conteudo">
-                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-                <?php the_excerpt(); ?>
-                <p class="small">por <?= $link_autor ?></p>
-              </div>
-            </article>
+        <div class="row mb-4">
+          <div class="col-4">
+            <i class="far fa-paper-plane"></i>
+            <p>Fácil Integração</p>
           </div>
 
-      <?php endwhile;
-      endif;
-      wp_reset_query();
-      ?>
+          <div class="col-4">
+            <i class="far fa-chart-bar"></i>
+            <p>Geração de Leads Qualificados</p>
+          </div>
 
-      <div class="lista__grafismo-baixo"></div>
-    </div>
+          <div class="col-4">
+            <i class="far fa-thumbs-up"></i>
+            <p>Cálculo Assertivo do Valor do Imóvel</p>
+          </div>
+        </div>
 
-    <div class="row lista__vermais">
-      <a href="<?php $url = bloginfo('url');
-                echo $url ?>/blog">Ver todos os artigos</a>
+        <div class="row mb-4">
+          <div class="col-12">
+            <a href="#saberMais" class="btn btn-secondary">Conheça</a>
+            <a href="#sejaNossoParceiro" class="btn btn-primary">Seja uma Imobiliária Parceira</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <iframe src="https://dataimob.com.br/widget?id=1" frameborder="0"></iframe>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- sobre -->
-<section class="sobre">
+<!-- saber mais -->
+<section id="saberMais" class="saber-mais">
   <div class="container">
-    <div class="row d-flex justify-content-center">
-      <div class="col-12 col-md-2 sobre__marca">
-        <img src="<?php bloginfo('template_url'); ?>/assets/images/dataimob-marcaneg.svg" width="160" height="91" class="img-fluid" alt="Marca DataImob" title="Marca DataImob" />
+    <div class="row">
+      <div class="col-12 saber-mais__titulo">
+        <h2>Instale o widget em seu site e capture mais clientes</h2>
+        <p class="lead">Conquiste potenciais clientes e gere leads automaticamente. Veja os benefícios:</p>
+      </div>
+    </div>
+
+    <div class="row saber-mais__beneficios">
+      <div class="col-8 saber-mais__item">
+        <div class="saber-mais__icone">
+          <i class="far fa-gem"></i>
+        </div>
+        <div class="saber-mais__texto">
+          <h3>Gere Leads de graça</h3>
+          <p>Nossa plataforma irá te enviar os primeiros 20 leads diários totalmente gratuitos. Caso ultrapasse esse limite, entre em <a class="btMenu" href="#contato">contato com a DataImob</a> que lhe apresentaremos um de nossos planos.</p>
+        </div>
       </div>
 
-      <div class="col-12 col-md-6 sobre__conteudo">
-        <p>A DataImob é uma empresa de inteligência que desenvolve indicadores estratégicos para o mercado imobiliário. Nosso objetivo é empresa referência no mercado de indicadores imobiliários, para isso contamos com muita inovação e tecnologia.</p>
+      <div class="col-8 saber-mais__item">
+        <i class="far fa-star"></i>
+        <h3>Índices precisos e atualizados</h3>
+        <p>Mensalmente revisamos nosso indicadores e reprocessamos nossos dados,
+          garantindo sempre uma maior confiabilidade no cálculo do valor do imóvel. Caso queira saber mais sobre a DataImob, <a class="btMenu" href="#sobreNos">clique aqui</a> e conheça sobre as nossas próximas ferramentas que serão disponibilizadas.</p>
+      </div>
+
+      <div class="col-8 saber-mais__item">
+        <i class="far fa-flag"></i>
+        <h3>Personalizável</h3>
+        <p>Personalize nosso Widget com as cores da sua empresa.</p>
+      </div>
+
+      <div class="col-8 saber-mais__item">
+        <i class="far fa-check-circle"></i>
+        <h3>Fácil instalação</h3>
+        <p>Nosso Widget é muito prático de instalar! <a class="btMenu" href="#sejaNossoParceiro">Cadastre</a> em nosso site e receba um email com o script e o código único para a inserção no seu portal.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 text-center">
+        <a href="#sejaNossoParceiro" class="btn btn-primary"><span class="font-weight-bold">Clique aqui</span> e seja uma imobiliária parceira</a>
+      </div>
+    </div>
+</section>
+
+<!-- seja parceiro -->
+<section id="sejaNossoParceiro" class="seja-parceiro">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6 seja-parceiro__intro">
+        <h2>Seja Nosso Parceiro</h2>
+        <p class="lead">Instale o widget em seu site agora mesmo</p>
+        <i class="far fa-handshake fa-9x "></i>
+        <p class="lead">Preencha o formulário ao lado para receber as instruções de instalação em seu site.</p>
+      </div>
+
+      <div class="col-12 col-md-6 seja-parceiro__form">
+        <form id="FormsRequisicao">
+          <div class="form-group">
+            <label for="impNome" class="sr-only">Nome</label>
+            <input type="text" class="form-control" id="impNome" aria-describedby="helpNome" placeholder="Digite seu nome completo" required>
+          </div>
+
+          <div class="form-group">
+            <label for="impEmail" class="sr-only">E-mail</label>
+            <input type="email" class="form-control" id="impEmail" aria-describedby="helpEmail" placeholder="contato@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="impTelefone" class="sr-only">Telefone</label>
+            <input type="text" class="form-control" id="impTelefone" aria-describedby="helpTelefone" placeholder="(00) 00000-0000" required>
+          </div>
+
+          <div class="form-group">
+            <label for="impNomeEmpresa" class="sr-only">Telefone</label>
+            <input type="text" class="form-control" id="impNomeEmpresa" aria-describedby="helpNomeEmpresa" placeholder="Nome da Empresa" required>
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" id="impSite" aria-describedby="helpSite" placeholder="Site da Empresa" required>
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" id="impCidadeEmpresa" aria-describedby="helpCidadeEmpresa" placeholder="Cidade" required>
+          </div>
+
+          <div class="form-group">
+            <select name="select" class="form-control" id="impEstadoEmpresa" aria-describedby="helpEstadoEmpresa" placeholder="Estado da Empresa" required>
+              <option value="" disabled selected>Escolha um estado</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" id="impCupom" aria-describedby="helpSite" placeholder="Cupom promocional">
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="impTermo" required>
+            <label class="form-check-label" for="impTermo">
+              Eu li e concordo com os <a data-toggle="modal" data-target="#modalTermo" id="linktermoaceite" href="#modalTermo" class="tu"> termos de utilização.</a>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="Proximo11">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- sobre nos -->
+<section id="sobreNos" class="sobre-nos">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 sobre-nos__titulo">
+        <h2>Sobre Nós</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-6 sobre-nos__item">
+        <i class="far fa-user-circle"></i>
+        <h3>Quem Somos</h3>
+        <p>A DataImob é uma empresa de inteligência que desenvolve indicadores estratégicos para o mercado imobiliário.</p>
+      </div>
+
+      <div class="col-12 col-md-6 sobre-nos__item">
+        <i class="far fa-edit"></i>
+        <h3>Nosso Objetivo</h3>
+        <p>Ser uma empresa referência no mercado de indicadores imobiliários, para isso contamos com muita inovação e tecnologia.</p>
+      </div>
+
+      <div class="col-12 col-md-6 sobre-nos__item">
+        <i class="far fa-object-group"></i>
+        <h3>O que Fazemos</h3>
+        <p>Criamos ferramentas inteligentes que auxiliam na tomada de decisão, seja para comprar, vender, alugar ou construir um imóvel.</p>
+      </div>
+
+      <div class="col-12 col-md-6 sobre-nos__item">
+        <i class="far fa-clipboard"></i>
+        <h3>Como Fazemos</h3>
+        <p>Cruzamos dados de diferentes fontes para ter sempre o melhor indicador financeiro sobre o mercado imobiliário, possibilitando oferecer informações precisas de acordo com as características de cada imóvel e sua localização.
+        </p>
+      </div>
+
+      <div class="col-12 col-md-6 sobre-nos__item">
+        <i class="far fa-compass"></i>
+        <h3>O que Buscamos</h3>
+        <p>Desenvolver parcerias estratégicas visando aprimorar nossa base de dados e criar soluções pensando na inovação do mercado imobiliário.</p>
+        <a href="#sejaNossoParceiro" class="btn btn-primary"><span class="font-weight-bold">Clique aqui</span> e seja uma imobiliária parceira</a>
+      </div>
+
+      <div class="col-12 col-md-6 sobre-nos__item">
+        <i class="far fa-sun"></i>
+        <h3>O que Ainda Iremos Fazer</h3>
+        <p>Em breve teremos novidades e iremos contar!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- contato -->
+<section id="contato" class="contato">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 contato__titulo">
+        <h2>Fale com a DataImob</h2>
+        <span class="lead">Preencha o formulário abaixo e logo entraremos em contato.</span>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 contato__form">
+        <form action="" id="FormsContato">
+          <div class="form-group">
+            <input required type="text" class="form-control" id="impNome2" placeholder="Nome Completo">
+          </div>
+
+          <div class="form-group">
+            <input required type="email" class="form-control" id="impEmail2" placeholder="E-mail">
+          </div>
+
+          <div class="form-group">
+            <input required type="text" class="form-control" id="impAssunto2" placeholder="Assunto">
+          </div>
+
+          <div class="form-group">
+            <textarea required class="form-control" id="exampleFormControlTextarea12" rows="3" placeholder="Mensagem"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Enviar contato</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 contato__email">
+        <p>Se preferir, mande-nos um e-mail.<br /> <span class="text-primary">contato@dataimob.com.br</span></p>
       </div>
     </div>
   </div>

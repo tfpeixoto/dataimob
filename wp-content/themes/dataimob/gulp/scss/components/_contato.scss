@@ -1,0 +1,29 @@
+.contato{
+  background: $light-blue;
+  padding: 4rem 0;
+  text-align: center;
+
+  &__titulo{
+    margin-bottom: 2rem;
+    text-align: center;
+
+    h2{
+      color: $primary;
+      font-weight: bold;
+    }
+  }
+
+  &__form{
+    margin-bottom: 2rem;
+
+    button{
+      width: 100%;
+    }
+  }
+
+  &__email{
+    .lead{
+      font-weight: bold;
+    }
+  }
+}

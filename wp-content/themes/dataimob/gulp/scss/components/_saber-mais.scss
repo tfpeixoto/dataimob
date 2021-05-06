@@ -1,0 +1,31 @@
+.saber-mais{
+  padding: 4rem 0;
+
+  &__titulo{
+    margin-bottom: 2rem;
+    text-align: center;
+
+    h2{
+      color: $primary;
+    }
+  }
+
+  &__beneficios{
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item{
+    i{
+      display: block;
+      float: left;
+      font-size: 3rem;
+    }
+    h3{
+      color: $primary;
+    }
+  }
+
+  &__icone{
+    display: block;
+    height: 1

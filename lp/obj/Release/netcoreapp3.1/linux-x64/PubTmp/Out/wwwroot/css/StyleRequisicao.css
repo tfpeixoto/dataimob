@@ -1,0 +1,13 @@
+﻿
+#linktermoaceite {
+    display: inline;
+    color: #3168ce;
+}
+
+    #linktermoaceite:hover {
+        color: #002E83;
+    }
+
+.termoAceite {
+    padding: 4%;
+}

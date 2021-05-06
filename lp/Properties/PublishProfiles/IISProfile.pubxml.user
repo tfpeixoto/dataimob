@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <_PublishTargetUrl>C:\Users\fernando.bretz\Documents\DataImob_Produção\Bin\DataImob</_PublishTargetUrl>
+    <History>True|2021-04-20T19:34:32.2627455Z;True|2021-04-20T16:24:20.1468164-03:00;True|2021-04-20T16:20:20.1247653-03:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Host=dataimob-db.cphqjwdeluyn.us-east-1.rds.amazonaws.com%3bPort=5432%3bPooling=true%3bDatabase=gd_acolweb%3bUser Id=postgres%3bPassword=0%2awqa0f\pkd%25#%29&amp;=%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <File Include="Views/Principal/Index.cshtml">
+      <publishTime>02/12/2021 10:28:47</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

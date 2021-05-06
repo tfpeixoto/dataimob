@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br" class="h-100">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] Widget</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
+    <link href="/widget/css/configuracoes.css?v=00.8" rel="stylesheet">
+    <script src="/widget/js/fontAW_a076d05399.js?v=00.5"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link href="~/widget/css/fontawesome-stars.css" rel="stylesheet" />
+    <style>
+        .search-input.active input {
+            border-radius: 5px 5px 0 0;
+        }
+
+        .search-input .autocom-box {
+            padding: 0;
+            opacity: 0;
+            pointer-events: none;
+            max-height: 280px;
+            overflow-y: auto;
+        }
+
+        .search-input.active .autocom-box {
+            padding: 10px 8px;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .autocom-box li {
+            list-style: none;
+            padding: 8px 12px;
+            display: none;
+            width: 100%;
+            cursor: default;
+            border-radius: 3px;
+        }
+
+        .search-input.active .autocom-box li {
+            display: block;
+        }
+
+        .autocom-box li:hover {
+            background: #efefef;
+        }
+
+        .search-input .icon {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            height: 55px;
+            width: 55px;
+            text-align: center;
+            line-height: 55px;
+            font-size: 20px;
+            color: #644bff;
+            cursor: pointer;
+        }
+
+        .h2 {
+            font-size: calc(1.135rem + .9vw);
+        }
+
+        /* Custom page CSS
+        -------------------------------------------------- */
+        /* Not required for template or sticky footer method. */
+
+        .container-fluid {
+            width: auto;
+            max-width: 680px;
+            padding: 0 15px;
+        }
+
+        footer {
+            border-top: 0.1px solid #CCCCCC;
+        }
+
+        #logowidget {
+            width: 40%;
+        }
+    </style>
+</head>
+<body class="bg-light d-flex flex-column h-100">
+    <nav class="navbar navbar-dark bg-secondary text-white py-3  px-0">
+        <div class="container-fluid" style="width: -webkit-fill-available">
+            <h1 id="TituloWidget" class="text-uppercase text-center text-secondary h2 mb-0"><i class="fas fa-search-dollar"></i> Avalie o seu imóvel</h1>
+            <h6 id="Titulo" class="text-center text-secondary mt-0"></h6>
+        </div>
+    </nav>
+    <div class="container pl-2 pr-4">
+        @RenderBody()
+    </div>
+
+    @RenderSection("Scripts", required: false)
+    <!--JavaScript -->
+    <script src="/widget/js/ScriptSugestao.js?v=00.7"></script>
+    <script src="/widget/js/suggestions.js?v=00.5"></script>
+    <script src="/js/jquery.maskMoney.min.js"></script>
+    <script src="/js/jquery.mask.js"></script>
+    <script src="/widget/js/ScriptWidget.js?v=00.29"></script>
+    <script src="/widget/js/WidgetGeolocation.js?v=0.01"></script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WW50PGE9R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9WW50PGE9R');
+    </script>
+
+    <footer class="footer mt-auto">
+        <div class="container-fluid text-center">
+            <span style="display: inline-block; font-size: 0.6rem; font-weight: bold;">Powered by </span> <a target="_blank" href="https://dataimob.com.br/"><img id="logowidget" src="~/Imagens/horizontal padrao.png" alt="DataImob" class="img-fluid logo"></a>
+        </div>
+    </footer>
+
+
+</body>
+
+ 
+
+
+</html>

@@ -1,11 +1,13 @@
-// @import "../node_modules/bootstrap/scss/functions";
-// @import "../node_modules/bootstrap/scss/variables";
-// @import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
 
-@import "../node_modules/bootstrap/scss/bootstrap";
 @import "components/variaveis";
+@import "../node_modules/bootstrap/scss/bootstrap";
 
-@import "components/lista";
-@import "components/sobre";
+@import "components/saber-mais";
+@import "components/seja-parceiro";
+@import "components/sobre-nos";
+@import "components/contato";
 
 @import "components/footer";

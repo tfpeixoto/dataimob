@@ -1,0 +1,28 @@
+.seja-parceiro{
+  background: var(--secondary);
+  padding: 4rem 0;
+
+  &__intro{
+    text-align: center;
+
+    h2{
+      color: $primary;
+      font-weight: bold;
+    }
+    i{
+      color: $white;
+    }
+  }
+
+  &__form{
+    background: white;
+    border-radius: 20px;
+    box-shadow: 10px 0 20px 10px rgba(0,0,0,.15);
+    padding: 3rem 2rem;
+
+    button{
+      margin-top: 1rem;
+      width: 100%;
+    }
+  }
+}
