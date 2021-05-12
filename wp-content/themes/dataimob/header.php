@@ -16,7 +16,7 @@
 <body <?php body_class(); ?>>
 
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
         <!-- <a class="navbar-brand" href="#">DataImob</a> -->
         <?php the_custom_logo(); ?>

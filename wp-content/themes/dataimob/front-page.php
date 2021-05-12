@@ -8,7 +8,7 @@ require_once("header.php");
 <section class="banner home">
   <div class="container">
     <div class="row justify-content-between">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-7">
         <div class="row mb-4">
           <span>Conheça nossa nova ferramenta</span>
           <h1>Calculadora do valor do imóvel</h1>
@@ -35,14 +35,14 @@ require_once("header.php");
 
         <div class="row mb-4">
           <div class="col-12">
-            <a href="#saberMais" class="btn btn-primary">Conheça</a>
-            <a href="#sejaNossoParceiro" class="btn btn-secondary text-primary">Seja uma Imobiliária Parceira</a>
+            <a href="#saberMais" class="btn btn-lg btn-primary">Conheça</a>
+            <a href="#sejaNossoParceiro" class="btn btn-lg btn-secondary">Seja uma Imobiliária Parceira</a>
           </div>
         </div>
       </div>
 
       <div class="col-12 col-md-4">
-        <iframe src="https://dataimob.com.br/widget?id=1" frameborder="0"></iframe>
+        <iframe src="https://app.dataimob.com.br/widget?id=1" frameborder="0"></iframe>
       </div>
     </div>
   </div>
@@ -107,7 +107,7 @@ require_once("header.php");
 
     <div class="row">
       <div class="col-12 saber-mais__cta">
-        <a href="#sejaNossoParceiro" class="btn btn-primary"><span class="font-weight-bold">Clique aqui</span> e seja uma imobiliária parceira</a>
+        <a href="#sejaNossoParceiro" class="btn btn-lg btn-secondary"><span class="font-weight-bold">Clique aqui</span> e seja uma imobiliária parceira</a>
       </div>
     </div>
 </section>
@@ -243,13 +243,16 @@ require_once("header.php");
         <i class="far fa-compass"></i>
         <h3>O que Buscamos</h3>
         <p>Desenvolver parcerias estratégicas visando aprimorar nossa base de dados e criar soluções pensando na inovação do mercado imobiliário.</p>
-        <a href="#sejaNossoParceiro" class="btn btn-primary"><span class="font-weight-bold">Clique aqui</span> e seja uma imobiliária parceira</a>
       </div>
 
       <div class="col-12 col-md-6 sobre-nos__item">
         <i class="far fa-sun"></i>
         <h3>O que Ainda Iremos Fazer</h3>
         <p>Em breve teremos novidades e iremos contar!</p>
+      </div>
+
+      <div class="col-12 text-center my-4">
+        <a href="#sejaNossoParceiro" class="btn btn-lg btn-primary"><span class="font-weight-bold">Clique aqui</span> e seja uma imobiliária parceira</a>
       </div>
     </div>
   </div>

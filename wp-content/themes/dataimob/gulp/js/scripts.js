@@ -79,7 +79,7 @@ $('#impNome').bind('keyup blur', function () {
 
 
 //POST DO FORMS 
-$("#FormsRequisicao").submit(function (event) {
+$("#FormsRequisicao").on('submit', function (event) {
   event.preventDefault();
   var datareq = {};
   //PEGANDO VALORES DO FORMULARIO
