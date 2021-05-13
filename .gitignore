@@ -1,5 +1,8 @@
-wp-config.php
+# arquivos
 wp-content/themes/dataimob/gulp/node_modules
 wp-content/uploads
 dumps
-# lp
+lp
+
+# config db
+wp-config.php
