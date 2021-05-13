@@ -41,7 +41,7 @@ require_once("header.php");
         </div>
       </div>
 
-      <div class="col-12 col-md-4">
+      <div class="col-12 col-md-4 widget">
         <iframe src="https://app.dataimob.com.br/widget?id=1" frameborder="0"></iframe>
       </div>
     </div>
@@ -52,14 +52,14 @@ require_once("header.php");
 <section id="saberMais" class="saber-mais">
   <div class="container">
     <div class="row">
-      <div class="col-12 saber-mais__titulo">
+      <div class="col-11 saber-mais__titulo">
         <h2>Instale o widget em seu site e capture mais clientes</h2>
         <p class="lead">Conquiste potenciais clientes e gere leads automaticamente. <span class="font-weight-bold">Veja os benefícios:</span></p>
       </div>
     </div>
 
     <div class="row saber-mais__beneficios">
-      <div class="col-8 saber-mais__item">
+      <div class="col-11 col-md-8 saber-mais__item">
         <div class="saber-mais__icone">
           <i class="far fa-gem"></i>
         </div>
@@ -70,7 +70,7 @@ require_once("header.php");
         </div>
       </div>
 
-      <div class="col-8 saber-mais__item">
+      <div class="col-11 col-md-8 saber-mais__item">
         <div class="saber-mais__icone">
           <i class="far fa-star"></i>
         </div>
@@ -82,7 +82,7 @@ require_once("header.php");
         </div>
       </div>
 
-      <div class="col-8 saber-mais__item">
+      <div class="col-11 col-md-8 saber-mais__item">
         <div class="saber-mais__icone">
           <i class="far fa-flag"></i>
         </div>
@@ -93,7 +93,7 @@ require_once("header.php");
         </div>
       </div>
 
-      <div class="col-8 saber-mais__item">
+      <div class="col-11 col-md-8 saber-mais__item">
         <div class="saber-mais__icone">
           <i class="far fa-check-circle"></i>
         </div>
