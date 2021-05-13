@@ -1,6 +1,0 @@
-let suggestions = [
-    {
-        label: "",
-        labelfind: ""
-    }
-];
