@@ -45,7 +45,15 @@ $('#impNome').bind('keyup blur', function () {
 
 //POST DO FORMS 
 $("#FormsRequisicao").on('submit', function (event) {
-  event.preventDefault();
+  var response = grecaptcha.getResponse(captcha_parceiro);
+
+  if (response.length == 0) {
+    $('#modalErroCaptcha').modal('show')
+    event.preventDefault()
+    return false
+  }
+  event.preventDefault()
+
   var datareq = {};
   //PEGANDO VALORES DO FORMULARIO
   var nome = document.getElementById('impNome').value;
@@ -100,6 +108,26 @@ $("#FormsRequisicao").on('submit', function (event) {
     return false;
   }
 });
+
+$("#btnFecharHRE").on('click', function () {
+  $("#FormsRequisicao")[0].reset();
+  grecaptcha.reset(captcha_parceiro);
+})
+
+$("#btnFecharHER").on('click', function () {
+  $("#FormsRequisicao")[0].reset();
+  grecaptcha.reset(captcha_parceiro);
+})
+
+$("#btnFecharER").on('click', function () {
+  $("#FormsRequisicao")[0].reset();
+  grecaptcha.reset(captcha_parceiro);
+})
+
+$("#btnFecharRE").on('click', function () {
+  $("#FormsRequisicao")[0].reset();
+  grecaptcha.reset(captcha_parceiro);
+})
 
 
 function getToken() {
@@ -292,9 +320,16 @@ $('#impNome2').bind('keyup blur', function () {
 
 //POST DO FORMS 
 $("#FormsContato").on('submit', function (event) {
-  event.preventDefault();
-  $("#modalContato").modal('show');
-  //event.preventDefault();
+  var response = grecaptcha.getResponse(captcha_contato);
+
+  if (response.length === 0) {
+    $('#modalErroCaptcha').modal('show')
+    event.preventDefault()
+    return false
+  }
+  event.preventDefault()
+  $('#modalContato').modal('show')
+
   var dataContato = {};
   //PEGANDO VALORES DO FORMULARIO
   var nome = document.getElementById('impNome2').value;
@@ -322,9 +357,20 @@ $("#FormsContato").on('submit', function (event) {
     data: JsonContato,
     processData: false,
     success: function (data, textStatus, jQxhr) {
+      
     },
     error: function (jqXhr, textStatus, errorThrown) {
       console.log(errorThrown);
     }
   });
 });
+
+$("#btnFecharHCTT").on('click', function () {
+  $("#FormsContato")[0].reset();
+  grecaptcha.reset(captcha_contato);
+})
+
+$("#btnFecharCTT").on('click', function () {
+  $("#FormsContato")[0].reset();
+  grecaptcha.reset(captcha_contato);
+})

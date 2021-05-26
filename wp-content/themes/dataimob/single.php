@@ -29,7 +29,7 @@ if (have_posts()) : while (have_posts()) : the_post();
         </div>
 
         <div class="row post__conteudo">
-          <div class="col-12 col-md-2 post__conteudo__social">
+          <!--<div class="col-12 col-md-2 post__conteudo__social">
             <ul>
               <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
               <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -38,7 +38,7 @@ if (have_posts()) : while (have_posts()) : the_post();
               <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
               <li><a href="#"><i class="far fa-envelope"></i></a></li>
             </ul>
-          </div>
+          </div>-->
 
           <div class="col-12 col-md-10 post__conteudo__texto">
             <?php the_content() ?>

@@ -42,7 +42,9 @@
   }
 
   &__conteudo {
-    line-height: 2;
+    display: flex;
+    justify-content: center;
+    line-height: 1.75;
     padding: 3rem 0;
 
     &__social {
@@ -93,6 +95,7 @@
       h4,
       h5,
       h6 {
+        color: var(--primary);
         margin: 2rem 0 1rem 0;
       }
     }

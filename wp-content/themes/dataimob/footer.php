@@ -13,7 +13,24 @@
   </div>
 </footer>
 
+
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script>
+  var captcha_contato;
+  var captcha_parceiro;
+  
+  var onloadCallback = function() {
+    captcha_parceiro = grecaptcha.render('r-captcha_parceiro', {
+      'sitekey': '6LfIhNMaAAAAAAq4ZGLsDI1Nz1vh3bPXGVkLLpaG'
+    })
+    captcha_contato = grecaptcha.render('r-captcha_contato', {
+      'sitekey': '6LfIhNMaAAAAAAq4ZGLsDI1Nz1vh3bPXGVkLLpaG'
+    })
+  }
+</script>
+
 <?php wp_footer(); ?>
+
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>

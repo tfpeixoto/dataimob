@@ -197,6 +197,8 @@ require_once("header.php");
             </label>
           </div>
 
+          <div id="r-captcha_parceiro" class="d-flex justify-content-center g-recaptcha" style="margin: 10px" data-sitekey="6LfIhNMaAAAAAAq4ZGLsDI1Nz1vh3bPXGVkLLpaG"></div>
+
           <button type="submit" class="btn btn-primary" id="Proximo11">Enviar</button>
         </form>
       </div>
@@ -270,7 +272,7 @@ require_once("header.php");
 
     <div class="row justify-content-center">
       <div class="col-12 col-md-6 contato__form">
-        <form action="" id="FormsContato">
+        <form id="FormsContato">
           <div class="form-group">
             <input required type="text" class="form-control" id="impNome2" placeholder="Nome Completo">
           </div>
@@ -286,6 +288,8 @@ require_once("header.php");
           <div class="form-group">
             <textarea required class="form-control" id="exampleFormControlTextarea12" rows="3" placeholder="Mensagem"></textarea>
           </div>
+
+          <div id="r-captcha_contato" class="d-flex justify-content-center g-recaptcha" style="margin: 10px" data-sitekey="6LfIhNMaAAAAAAq4ZGLsDI1Nz1vh3bPXGVkLLpaG"></div>
 
           <button type="submit" class="btn btn-primary">Enviar contato</button>
         </form>
@@ -304,6 +308,7 @@ require_once("header.php");
 require_once('template-parts/modal-contato.php');
 require_once('template-parts/modal-cookie.php');
 require_once('template-parts/modal-registro-erro.php');
+require_once('template-parts/modal-erro-captcha.php');
 require_once('template-parts/modal-registro.php');
 require_once('template-parts/modal-termo.php');
 
