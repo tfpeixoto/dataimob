@@ -16,10 +16,20 @@ header{
       width: 110px;
     }
   }
-
+  .navbar{
+    .navbar-toggler{
+      .navbar-toggler-icon{
+        i{
+          color: var(--primary);
+          font-size: 2rem;
+        }
+      }
+    }
+  }
   .navbar-collapse{
     display: flex;
     justify-content: start;
+    transition: all ease-in-out .1s;
     
     @include media-breakpoint-up(md) {
       justify-content: flex-end;

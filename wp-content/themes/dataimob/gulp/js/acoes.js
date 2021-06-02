@@ -217,11 +217,11 @@ $(document).on('ready', function () {
   $('.cc-link').on('click', function (e) {
     $("#modalCookies").modal('show');
   });
-
+  
   $('#btnFecharCK').on('click', function (e) {
     $("#modalCookies").modal('hide');
   });
-
+  
   $('#btnFecharCKHD').on('click', function (e) {
     $("#modalCookies").modal('hide');
   });

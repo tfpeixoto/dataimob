@@ -18,7 +18,7 @@
 <script>
   var captcha_contato;
   var captcha_parceiro;
-  
+
   var onloadCallback = function() {
     captcha_parceiro = grecaptcha.render('r-captcha_parceiro', {
       'sitekey': '6LfIhNMaAAAAAAq4ZGLsDI1Nz1vh3bPXGVkLLpaG'
@@ -57,6 +57,10 @@
       "link": "Política de cookies.",
       "policy": "Política de cookies"
     }
+  });
+
+  $('.cc-link').on('click', function (e) {
+    $("#modalCookies").modal('show');
   });
 </script>
 

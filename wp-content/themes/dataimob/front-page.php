@@ -188,6 +188,7 @@ require_once("header.php");
 
           <div class="form-group">
             <input type="text" class="form-control" id="impCupom" aria-describedby="helpSite" placeholder="Cupom promocional">
+            <span id="helpCupom"></span>
           </div>
 
           <div class="form-check">
